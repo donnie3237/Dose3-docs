@@ -4,10 +4,10 @@
 	--sl-color-orange-low: hsl(var(--sl-hue-orange), 100%, 15%);
 	--sl-color-orange: hsl(var(--sl-hue-orange), 100%, 60%);
 	--sl-color-orange-high: hsl(var(--sl-hue-orange), 100%, 90%);
-	--sl-hue-blue: 16;
-	--sl-color-blue-low: rgb(255, 255, 255);
-	--sl-color-blue: orange;
-	--sl-color-blue-high: rgb(133, 82, 125);
+	--sl-hue-blue: 186;
+	--sl-color-blue-low: hsl(var(--sl-hue-blue), 72%, 15%);
+	--sl-color-blue: hsl(var(--sl-hue-blue), 72%, 50%);
+	--sl-color-blue-high: hsl(var(--sl-hue-blue), 72%, 90%);
 	--sl-hue-accent: var(--sl-hue-blue);
 	--sl-color-accent-low: var(--sl-color-blue-low);
 	--sl-color-accent: var(--sl-color-blue);
@@ -28,6 +28,10 @@
 ::-webkit-scrollbar{
     width: 0;
     height: 0;
+}
+input{
+    outline: none;
+    border: none;
 }
 *{
     font-family: 'Nunito', sans-serif;
