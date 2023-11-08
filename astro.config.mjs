@@ -31,8 +31,8 @@ export default defineConfig({
 				Footer:'./src/components/Footer.astro'
 			},
 			logo: {
-				dark:'./src/assets/dark.png',
-				light:'./src/assets/light.png',
+				dark:'./src/assets/dark.svg',
+				light:'./src/assets/light.svg',
 				replacesTitle: true,
 			},
 			social: {
