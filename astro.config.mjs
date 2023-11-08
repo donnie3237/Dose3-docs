@@ -1,17 +1,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import vercel from '@astrojs/vercel/serverless'
+import starlightLinksValidator from 'starlight-links-validator'
 
 const site = "https://dose3-docs.vercel.app";
 
-// https://astro.build/config
 export default defineConfig({
-	// output: 'server',
-	// adapter: vercel({
-	// 	edgeMiddleware: true,
-	// }),
 	site,
 	integrations: [
+		starlightLinksValidator(),
 		starlight({
 			title: 'DOSE3',
 			head: [
@@ -44,31 +40,31 @@ export default defineConfig({
 					label: 'Get started',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'installation', link: '/guides/install' },
-						{ label: 'create', link: '/guides/create' },
+						{ label: 'Installation', link: '/guides/install' },
+						{ label: 'Create', link: '/guides/create' },
 					],
 				},
 				{
 					label: 'Website',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'react', link: '/web/react' },
-						{ label: 'solid', link: '/web/solid' },
+						{ label: 'React', link: '/web/react' },
+						{ label: 'Solid', link: '/web/solid' },
 					],
 				},
 				{
 					label: 'Server',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'express', link: '/server/express/' },
-						{ label: 'axum', link: '/server/axum' },
+						{ label: 'Express', link: '/server/express/' },
+						{ label: 'Axum', link: '/server/axum' },
 					],
 				},
 				{
 					label: 'SSG',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'NextjS', link: '/ssg/nextjs/' },
+						{ label: 'NextjS', link: '/ssg/next/' },
 						{ label: 'Astro', link: '/ssg/astro' },
 					],
 				},
@@ -76,7 +72,7 @@ export default defineConfig({
 					label: 'Native',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'tauri', link: '/native/tauri/' },
+						{ label: 'Tauri', link: '/native/tauri/' },
 					],
 				},
 				{

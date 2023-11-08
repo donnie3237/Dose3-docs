@@ -26,27 +26,21 @@
 	--sl-color-black: #090016;
 
 	/* Custom */
-	--tauri-transition-speed: 200ms;
+	--tauri-transition-speed: 100ms;
 }
 
 ::-webkit-scrollbar{
     width: 0;
     height: 0;
 }
-.content details {
-	padding: 0 1rem;
-}
 
-.content details[open] {
-	background-color: var(--sl-color-gray-6);
-	padding-bottom: rem;
+input{
+    outline: none !important;
 }
-
-.content summary {
-	cursor: pointer;
-	padding: 1rem 0;
+input:hover{
+    outline: none !important;
+    border: none !important;
 }
-
 /* Heading link styling */
 .heading-link::after {
 	content: '#';
@@ -65,69 +59,8 @@
 	color: var(--sl-color-white) !important;
 }
 
-/* Index hero background */
-.hero-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: -1;
-	opacity: 0.7;
-	overflow: hidden;
-	background: linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
-		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px),
-		linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
-		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px),
-		linear-gradient(transparent 6px, transparent 6px, transparent 156px, transparent 156px),
-		linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
-		linear-gradient(-90deg, transparent 6px, transparent 6px, transparent 156px, transparent 156px),
-		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px), transparent;
-	background-size:
-		32px 32px,
-		32px 32px,
-		256px 256px,
-		256px 256px,
-		256px 256px,
-		256px 256px,
-		256px 256px,
-		256px 256px;
-}
-
-/* Transition hero background grid smoothly to page background color. */
-.hero-bg::after {
-	content: '';
-	position: absolute;
-	inset: 70% 0 0;
-	background: linear-gradient(transparent, var(--sl-color-bg));
-}
-
-.bg-grad {
-	position: absolute;
-	top: -50%;
-	left: 50%;
-	width: 150vh;
-	height: 150vh;
-	opacity: 0.3;
-	background: radial-gradient(circle, var(--sl-color-accent) 0%, var(--sl-color-bg) 70%);
-	animation: 6s intro;
-}
-
-.bg-grad-red {
-	position: absolute;
-	top: 0%;
-	left: -50%;
-	width: 150vh;
-	height: 150vh;
-	opacity: 0.3;
-	background: radial-gradient(circle, var(--sl-color-orange) 0%, var(--sl-color-bg) 70%);
-	animation: 14s intro;
-}
-
-/* Tauri logo on index page */
 .hero > img {
-	animation: 3s intro;
+	animation: 2s intro;
 	opacity: 1;
     filter: invert(1);
 }
@@ -136,7 +69,6 @@
     color: transparent!important;
     background-image: linear-gradient(71.78deg,#c23a00 27.87%,rgba(125, 125, 125, 0.72) 52.56%,#0292ba 74.58%);
     -webkit-background-clip: text!important;
-    font-weight: 900;
     font-family: 'Rubik';
 }
 
@@ -145,12 +77,9 @@ html[data-theme='light'] .hero > img {
 }
 
 html[data-theme='light'] #main-text{
-    color: transparent!important;
-    background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgba(137, 0, 93, 0.72) 52.56%,#710000 74.58%);
-    -webkit-background-clip: text!important;
-    font-weight: 900;
-    font-family: 'Rubik';
+    background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
 }
+
 @keyframes intro {
 	0% {
 		scale: 1.4;

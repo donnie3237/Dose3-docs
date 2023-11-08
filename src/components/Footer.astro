@@ -1,29 +1,24 @@
 ---
-
+// src/components/EmailLink.astro
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Footer.astro';
+const year = new Date().getFullYear();
 ---
 
-<div class="yo">
-   <div class="br"></div>
-   <p>© 2023 DOSE FROM ANOTHER PLANET</p>
-</div>
+<Default {...Astro.props}><slot /></Default>
 
-<style lang="scss">
-    .yo{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .br{
-            width: 100%;
-            margin-top: 20px;
-            height: 0.5px;
-            background-color: rgb(132, 132, 132);
-        }
-        p{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin-top: 20px;
-        }
-    }
-    
-    
+<hr />
+
+<p>&copy; {year} DOSE FROM ANOTHER PLANET</p>
+
+<style>
+	p {
+		text-align: center;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+	}
+	hr {
+		border: 0;
+		border-bottom: 1px solid var(--sl-color-hairline);
+	}
 </style>

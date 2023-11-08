@@ -23,6 +23,9 @@ dependencies:
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
+  starlight-links-validator:
+    specifier: ^0.4.2
+    version: 0.4.2(@astrojs/starlight@0.12.0)(astro@3.4.3)
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -2167,6 +2170,17 @@ packages:
       function-bind: 1.1.2
     dev: false
 
+  /hast-util-from-html@2.0.1:
+    resolution: {integrity: sha512-RXQBLMl9kjKVNkJTIO6bZyb2n+cUH8LFaSSzo82jiLT6Tfc+Pt7VQCS+/h3YwG4jaNE2TA2sdJisGWR+aJrp0g==}
+    dependencies:
+      '@types/hast': 3.0.3
+      devlop: 1.1.0
+      hast-util-from-parse5: 8.0.1
+      parse5: 7.1.2
+      vfile: 6.0.1
+      vfile-message: 4.0.2
+    dev: false
+
   /hast-util-from-parse5@7.1.2:
     resolution: {integrity: sha512-Nz7FfPBuljzsN3tCQ4kCBKqdNhQE2l0Tn+X1ubgKBPRoiDIu1mL08Cfw4k7q71+Duyaw7DXDN+VTAp4Vh3oCOw==}
     dependencies:
@@ -2194,6 +2208,12 @@ packages:
 
   /hast-util-has-property@2.0.1:
     resolution: {integrity: sha512-X2+RwZIMTMKpXUzlotatPzWj8bspCymtXH3cfG3iQKV+wPF53Vgaqxi/eLqGck0wKq1kS9nvoB1wchbCPEL8sg==}
+    dev: false
+
+  /hast-util-has-property@3.0.0:
+    resolution: {integrity: sha512-MNilsvEKLFpV604hwfhVStK0usFY/QmM5zX16bo7EjnAEGofr5YyI37kzopBlZJkHD4t887i+q/C8/tr5Q94cA==}
+    dependencies:
+      '@types/hast': 3.0.3
     dev: false
 
   /hast-util-parse-selector@3.1.1:
@@ -2909,6 +2929,12 @@ packages:
     resolution: {integrity: sha512-V4Zn/ncyN1QNSqSBxTrMOLpjr+IKdHl2v3KVLoWmDPscP4r9GcCi71gjgvUV1SFSKh92AjAG4peFuBl2/YgCJg==}
     dependencies:
       '@types/mdast': 3.0.15
+    dev: false
+
+  /mdast-util-to-string@4.0.0:
+    resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
+    dependencies:
+      '@types/mdast': 4.0.3
     dev: false
 
   /merge-stream@2.0.0:
@@ -4126,6 +4152,23 @@ packages:
 
   /sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+    dev: false
+
+  /starlight-links-validator@0.4.2(@astrojs/starlight@0.12.0)(astro@3.4.3):
+    resolution: {integrity: sha512-zTI1Si2SSuJYBH1ZdIEhF5+l2fj0+W5eOjLD4oVoPCZrTvz4bfNxOrAAqmlo8R1Pf423KbSYKS5fxDGRpuJnIA==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.9.0'
+      astro: '>=3.0.0'
+    dependencies:
+      '@astrojs/starlight': 0.12.0(astro@3.4.3)
+      astro: 3.4.3(sass@1.69.5)(typescript@5.2.2)
+      github-slugger: 2.0.0
+      hast-util-from-html: 2.0.1
+      hast-util-has-property: 3.0.0
+      kleur: 4.1.5
+      mdast-util-to-string: 4.0.0
+      unist-util-visit: 5.0.0
     dev: false
 
   /stdin-discarder@0.1.0:
