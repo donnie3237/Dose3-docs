@@ -3,11 +3,32 @@ title: ReactJS
 description: A react page in my new dose3 docs site.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
+&nbsp;&nbsp;&nbsp; ReactJS, or simply React, is a JavaScript library for building user interfaces. It was developed by Facebook and is maintained by Facebook and a community of individual developers and companies. React is commonly used for building single-page applications where the content is dynamically updated without needing to reload the entire page.
 
 ## Structure
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+### api
+```ts
+import  axios  from  "axios";
+import  { Stack }  from "../types/Main.type";
+import  { ApiURL }  from "./ApiURL";
+
+export async function GetData():Promise<Stack[]>{
+    const data : Stack[] = await axios.get(`${ApiURL}`)
+    return data
+}
+```
+### global
+- state
+
+### page
+
+### type
+### route
+### test
+### components
+### services
+
+## Migration
+### vitest
+### zustand
