@@ -57,6 +57,10 @@ input:hover{
 
 .hero > img {
 	animation: 1.5s intro;
+	background-color: rgb(133, 87, 0,0.5);
+	border-radius: 50%;
+	box-shadow: 0 0 10px white;
+	padding: 10px;
 	opacity: 1;
     filter: invert(1);
 }
