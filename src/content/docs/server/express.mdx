@@ -22,6 +22,24 @@ export default Main_router ;
 ```
 
 ### controller
+```ts
+//This file to make Controller process you can do anything and export it in function to use in router
+import Model from "../model/main.model";
+import {Request ,Response} from "express";
+
+export async function get(req:Request,res:Response){
+    res.send('welcome to expressTS')
+}
+
+export async function create(req:Request,res:Response){
+    const {name , age} = req.body;
+    const result = await Model.create({
+        name:name,
+        age:age
+    })
+    res.send(result)
+};
+```
 ### model
 <Tabs>
 	<TabItem label="MongoDB">
@@ -80,8 +98,10 @@ export default Main_router ;
     ```
     </TabItem>
 </Tabs>
-## Security
+
+## 🔐Security
 &nbsp;&nbsp;security is the topic we concerned about so that we use sample protection there
+
 ### DDOS protection
 
 ```ts

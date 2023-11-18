@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 :root {
-	--sl-hue-orange: 92;
+	--sl-hue-orange: 20;
 	--sl-color-orange-low: hsl(var(--sl-hue-orange), 100%, 15%);
 	--sl-color-orange: hsl(var(--sl-hue-orange), 100%, 60%);
 	--sl-color-orange-high: hsl(var(--sl-hue-orange), 100%, 90%);
-	--sl-hue-blue: 300;
+	--sl-hue-blue: 600;
 	--sl-color-blue-low: hsl(var(--sl-hue-blue), 72%, 15%);
 	--sl-color-blue: hsl(var(--sl-hue-blue), 72%, 50%);
 	--sl-color-blue-high: hsl(var(--sl-hue-blue), 72%, 90%);
@@ -101,10 +101,10 @@
 
 .bg-grad {
 	position: absolute;
-	top: -50%;
-	left: 50%;
-	width: 150vh;
-	height: 150vh;
+	top: 10vh;
+	right: 0;
+	width: 100vh;
+	height: 100vh;
 	opacity: 0.3;
 	background: radial-gradient(circle, var(--sl-color-accent) 0%, var(--sl-color-bg) 70%);
 	animation: 7s intro;
