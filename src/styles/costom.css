@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
 :root {
-	--sl-hue-orange: 25;
+	--sl-hue-orange: 92;
 	--sl-color-orange-low: hsl(var(--sl-hue-orange), 100%, 15%);
 	--sl-color-orange: hsl(var(--sl-hue-orange), 100%, 60%);
 	--sl-color-orange-high: hsl(var(--sl-hue-orange), 100%, 90%);
-	--sl-hue-blue: 260;
+	--sl-hue-blue: 300;
 	--sl-color-blue-low: hsl(var(--sl-hue-blue), 72%, 15%);
 	--sl-color-blue: hsl(var(--sl-hue-blue), 72%, 50%);
 	--sl-color-blue-high: hsl(var(--sl-hue-blue), 72%, 90%);
@@ -14,33 +13,40 @@
 	--sl-color-accent: var(--sl-color-blue);
 	--sl-color-accent-high: var(--sl-color-blue-high);
 
-	--sl-color-white: #ffffff;
-	--sl-color-gray-1: #ffffff;
-	--sl-color-gray-2: #ffffff;
-	--sl-color-gray-3: #ffffff;
-	--sl-color-gray-4: #1e1e1e;
-	--sl-color-gray-5: #292929;
-	--sl-color-gray-6: rgb(9, 0, 20,0.99);
+	--sl-color-white: #e0e0fa;
+	--sl-color-gray-1: #e0e0fa;
+	--sl-color-gray-2: #c2c2c2;
+	--sl-color-gray-3: #8b8b8b;
+	--sl-color-gray-4: #585858;
+	--sl-color-gray-5: #383838;
+	--sl-color-gray-6: #090016;
 	--sl-color-black: #090016;
 
-	--tauri-transition-speed: 100ms;
+	/* Custom */
+	--tauri-transition-speed: 200ms;
 }
 
 ::-webkit-scrollbar{
-    width: 0;
-    height: 0;
+	width: 0;
+}
+.content details {
+	padding: 0 1rem;
 }
 
-input{
-    outline: none !important;
-}
-input:hover{
-    outline: none !important;
-    border: none !important;
+.content details[open] {
+	background-color: var(--sl-color-gray-6);
+	padding-bottom: rem;
 }
 
+.content summary {
+	cursor: pointer;
+	padding: 1rem 0;
+}
+
+/* Heading link styling */
 .heading-link::after {
 	content: '#';
+	padding-inline-start: 0.25em;
 	opacity: 0;
 	transition: var(--tauri-transition-speed);
 }
@@ -55,16 +61,54 @@ input:hover{
 	color: var(--sl-color-white) !important;
 }
 
-.hero > img {
-	animation: 1.5s intro;
-	background-color: rgb(133, 87, 0,0.5);
-	border-radius: 50%;
-	box-shadow: 0 0 10px white;
-	padding: 10px;
-	opacity: 1;
-    filter: invert(1);
+/* Index hero background */
+.hero-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: -1;
+	opacity: 0.9;
+	overflow: hidden;
+	background: linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
+		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px),
+		linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
+		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px),
+		linear-gradient(transparent 6px, transparent 6px, transparent 156px, transparent 156px),
+		linear-gradient(-90deg, var(--sl-color-gray-6) 1px, transparent 1px),
+		linear-gradient(-90deg, transparent 6px, transparent 6px, transparent 156px, transparent 156px),
+		linear-gradient(var(--sl-color-gray-6) 1px, transparent 1px), transparent;
+	background-size:
+		32px 32px,
+		32px 32px,
+		256px 256px,
+		256px 256px,
+		256px 256px,
+		256px 256px,
+		256px 256px,
+		256px 256px;
 }
 
+/* Transition hero background grid smoothly to page background color. */
+.hero-bg::after {
+	content: '';
+	position: absolute;
+	inset: 70% 0 0;
+	background: linear-gradient(transparent, var(--sl-color-bg));
+}
+
+.bg-grad {
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	width: 150vh;
+	height: 150vh;
+	opacity: 0.3;
+	background: radial-gradient(circle, var(--sl-color-accent) 0%, var(--sl-color-bg) 70%);
+	animation: 7s intro;
+}
 #main-text{
     color: transparent!important;
     background-image: linear-gradient(71.78deg,#c23a00 27.87%,rgba(125, 125, 125, 0.72) 52.56%,#0292ba 74.58%);
@@ -72,12 +116,31 @@ input:hover{
     font-family: 'Rubik';
 	font-weight: 900 !important;
 }
-html[data-theme='light'] .hero > img {
-	filter: invert(0);
-}
 
 html[data-theme='light'] #main-text{
     background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
+}
+/* 
+.bg-grad-red {
+	position: absolute;
+	top: 0%;
+	left: -50%;
+	width: 150vh;
+	height: 150vh;
+	opacity: 0.3;
+	background: radial-gradient(circle, var(--sl-color-orange) 5%, var(--sl-color-bg) 60%);
+	animation: 14s intro;
+} */
+
+/* Tauri logo on index page */
+.hero > img {
+	animation: 3s intro;
+	opacity: 0.9;
+	filter: invert(1);
+}
+
+html[data-theme='light'] .hero > img {
+	filter: invert(0);
 }
 
 @keyframes intro {
@@ -91,6 +154,18 @@ html[data-theme='light'] #main-text{
 	}
 
 	100% {
+	}
+}
+@keyframes logo {
+	0% {
+	}
+
+	80% {
+		background: radial-gradient(circle, rgb(25, rgb(42, 9, 42)) 0%,violet  70%);
+	}
+
+	100% {
+		background: radial-gradient(circle, blue 0%,violet  70%); 
 	}
 }
 

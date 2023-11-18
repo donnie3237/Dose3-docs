@@ -3,7 +3,7 @@ title: Make Project Fast and productive
 description: with react solid express nextjs astrojs tauri
 template: splash
 hero:
-  title: '<span id="main-text">Make Project Fast</span>'
+  title: '<div><h3>Make Your Project </h3><span id="main-text">Blazingly Fast</span></div>'
   tagline: with cool app template dose3 starter kit
   image:
     file: ../../assets/logo.svg
@@ -15,11 +15,23 @@ hero:
     - text: Npm cli package
       link: https://www.npmjs.com/package/dose3
       icon: external
+      variant: minimal
+banner:
+  content: |
+    this docs is in beta !
+    <a href="https://dose-blog.vercel.app">Read blog</a>
 ---
 
-
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import { Tweet, Vimeo, YouTube } from 'astro-embed';
+import Main from '../../components/main.astro'
+
+<div class="hero-bg">
+	<div class="bg-logo"></div>
+	<div class="bg-grad"></div>
+	<div class="bg-grad-red"></div>
+</div>
+
+<Main/>
 
 ## Make it with Dose3 
 
