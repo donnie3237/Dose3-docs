@@ -121,16 +121,6 @@ html[data-theme='light'] #main-text{
     background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
 }
 
-.bg-grad-red {
-	position: absolute;
-	top: 0%;
-	left: -50%;
-	width: 150vh;
-	height: 150vh;
-	opacity: 0.3;
-	background: radial-gradient(circle, var(--sl-color-orange) 5%, var(--sl-color-bg) 60%);
-	animation: 14s intro;
-}
 
 /* Tauri logo on index page */
 .hero > img {
