@@ -6,9 +6,12 @@ description: A react page in my new dose3 docs site.
 &nbsp;&nbsp;&nbsp; ReactJS, or simply React, is a JavaScript library for building user interfaces. It was developed by Facebook and is maintained by Facebook and a community of individual developers and companies. React is commonly used for building single-page applications where the content is dynamically updated without needing to reload the entire page.
 
 ## Structure
-
+- api
+- global
+    - state
+    - style
 ### api
-
+in this case we get api file yo path your api data and return
 ```ts
 import  axios  from  "axios";
 import  { Stack }  from "../types/Main.type";
@@ -20,8 +23,10 @@ export async function GetData():Promise<Stack[]>{
 }
 ```
 ### global
-- state
-
+> state
+>    in this floder we need to use global state file with zustand
+> style
+>   set variable value of css font and many thing if you want it rendered on every page
 ### page
 
 ### type

@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator'
-
 const site = "https://dose3-docs.vercel.app";
 
 export default defineConfig({
@@ -18,7 +17,7 @@ export default defineConfig({
 				{
 					tag: 'meta',
 					attrs: { property: 'twitter:image', content: site + '/og.jpg?v=1' },
-				},
+				}
 			],
 			customCss: [
 				'./src/styles/costom.css',
