@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator'
+import locales from './locales.json';
 const site = "https://dose3-docs.vercel.app";
 
 export default defineConfig({
@@ -82,6 +83,7 @@ export default defineConfig({
 					],
 				},
 			],
+			locales,
 		}),
 	],
 });

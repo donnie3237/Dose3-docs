@@ -1,0 +1,10 @@
+{
+    "root": {
+      "label": "English",
+      "lang": "en"
+    },
+    "th": {
+      "label": "Thai",
+      "lang": "th"
+    }
+  }

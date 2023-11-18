@@ -3,11 +3,108 @@ title: ExpressJS
 description: A expressjs page in my new dose3 docs site.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what your documenting.
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+&nbsp;&nbsp;Express.js, commonly known as Express, is a fast and minimalist web application framework for Node.js. It provides a simple and flexible set of features for building web applications and APIs. Express.js is designed to be unopinionated, allowing developers to structure and organize their applications according to their specific needs.
 
 ## Structure
+### router
+&nbsp;&nbsp;in router file you can get function from controller file and use it to make clean router 
+```ts
+import {IRouter , Router} from 'express';
+const Main_router : IRouter = Router();
+import { create , get} from '../Controller/main.controller'
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+Main_router.get("/", get)
+Main_router.post('/example',create)
+
+export default Main_router ;
+```
+
+### controller
+### model
+<Tabs>
+	<TabItem label="MongoDB">
+    ```ts
+    //make schema model in mongoose example
+    import mongoose from "mongoose";
+    import { user } from "../types/type";
+
+    const model = new mongoose.Schema(
+        {
+            name:{
+                type: String,
+                required: true
+            },
+            age:{
+                type: Number,
+                required: true
+            }
+        }, 
+        {   
+            collection: 'model',
+        }
+    )
+
+    const Model: mongoose.Model<user> = mongoose.model("model", model)
+    export default Model
+    ```
+    </TabItem>
+	<TabItem label="PostgreSQL">
+    ```prisma
+    // in schema for pgsql you can set it in prisma.schema file
+    model User {
+        id    Int     @id @default(autoincrement())
+        email String  @unique
+        name  String?
+    }
+    ```
+    </TabItem>
+</Tabs>
+### middleware
+### db
+> if you use PostgreSQL you will see  prisma floder and you can use it to set database
+### .env
+<Tabs>
+	<TabItem label="mongoose">
+    ```ts
+    PORT = 8080
+    DATABASE_URI = '< DATABASE_URL >'
+    DATABASE_NAME = '< DB_NAME >'
+    ```
+    </TabItem>
+	<TabItem label="prisma">
+    ```ts
+    PORT= 7777
+    DATABASE_URL="< DATABASE_URL >"
+    ```
+    </TabItem>
+</Tabs>
+## Security
+&nbsp;&nbsp;security is the topic we concerned about so that we use sample protection there
+### DDOS protection
+
+```ts
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+	// store: ... , // Use an external store for consistency across multiple server instances.
+})
+```
+
+### SQL injection protection
+- prisma
+
+### cors protection
+```ts
+// in this part from middle ware you can replace your website in * to protect your site from another user
+app.use(cors({
+    "origin":'*',
+    "methods": ['GET','POST','PUT','DELETE']
+}));
+```
+:::tip[Did you know?]
+You can use vercel template for free serverless hosting on vercel
+:::
