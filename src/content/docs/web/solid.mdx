@@ -3,3 +3,42 @@ title: SolidJS
 description: A solid.js page in my new dose3 docs site.
 
 ---
+
+&nbsp;&nbsp;&nbsp; SolidJS is a modern JavaScript framework for building user interfaces. It is designed to be performant, easy to use, and developer-friendly. SolidJS is inspired by React and Svelte, and it combines the best of both worlds.
+
+&nbsp;&nbsp;&nbsp; SolidJS is a good choice for developers who want to build performant, easy-to-maintain web applications. It is also a good choice for developers who are new to JavaScript frameworks.
+
+## Structure
+
+### api
+in this case we get api file yo path your api data and return
+```ts
+import  axios  from  "axios";
+import  { Stack }  from "../types/Main.type";
+import  { ApiURL }  from "./ApiURL";
+
+export async function GetData():Promise<Stack[]>{
+    const data : Stack[] = await axios.get(`${ApiURL}`)
+    return data
+}
+```
+### global
+> state
+>    in this floder we need to use global state file with zustand
+> style
+>   set variable value of css font and many thing if you want it rendered on every page
+### page
+&nbsp;&nbsp; in page floder you can  and `.jsx` file and write ReactJS code in it to make pags of your website
+### type
+### route
+### test
+### components
+### services
+
+## Migration
+### vitest
+### zustand
+
+:::tip[Did you know?]
+Astro helps you build faster websites with [“Islands Architecture”](https://docs.astro.build/en/concepts/islands/).
+:::
