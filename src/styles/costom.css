@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 :root {
 	--sl-hue-orange: 20;
 	--sl-color-orange-low: hsl(var(--sl-hue-orange), 100%, 15%);
@@ -121,8 +122,6 @@ html[data-theme='light'] #main-text{
     background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
 }
 
-
-/* Tauri logo on index page */
 .hero > img {
 	animation: 3s intro;
 	opacity: 0.9;
@@ -144,18 +143,6 @@ html[data-theme='light'] .hero > img {
 	}
 
 	100% {
-	}
-}
-@keyframes logo {
-	0% {
-	}
-
-	80% {
-		background: radial-gradient(circle, rgb(25, rgb(42, 9, 42)) 0%,violet  70%);
-	}
-
-	100% {
-		background: radial-gradient(circle, blue 0%,violet  70%); 
 	}
 }
 

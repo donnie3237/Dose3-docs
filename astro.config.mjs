@@ -50,7 +50,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'React', link: '/web/react' },
 						{ label: 'Solid', link: '/web/solid' },
-						{ label: 'Vue', link: '/web/Vue' },
+						{ label: 'Vue', link: '/web/vue' },
 					],
 				},
 				{
