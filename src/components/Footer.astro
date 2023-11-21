@@ -3,8 +3,13 @@
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Footer.astro';
 const year = new Date().getFullYear();
+import { EditLink, LastUpdated, Pagination } from 'virtual:starlight/components';
 ---
 
+<div class="meta sl-flex">
+	<EditLink {...Astro.props} />
+	<LastUpdated {...Astro.props} />
+</div>
 <Default {...Astro.props}><slot /></Default>
 
 <hr />
