@@ -81,10 +81,27 @@ export function Copy(text:string):void{
 }
 ```
 ### test
+in test floder for unit testing project to run UI testing run `npm run test`
+```ts
+import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom';
+
+describe('App', () => {
+  const x = 2
+  const y = 2
+  it('can plus', () => {
+    expect(x+y).toBe(4)
+  });
+  it('can multiply', () => {
+    expect(x*y).toBe(4)
+  });
+});
+```
 ## Migration
 ### vitest
+learn more <a href="https://vitest.dev/">Vitest</a>
 ### zustand
 
 :::tip[Did you know?]
-Astro helps you build faster websites with [“Islands Architecture”](https://docs.astro.build/en/concepts/islands/).
+solidjs is the top performance of web framework in 2023
 :::
