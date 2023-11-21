@@ -46,29 +46,15 @@ export default defineConfig({
 				},
 				{
 					label: 'Website',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'React', link: '/web/react' },
-						{ label: 'Solid', link: '/web/solid' },
-						{ label: 'Vue', link: '/web/vue' },
-					],
+					autogenerate: { directory: 'web' },
 				},
 				{
 					label: 'Server',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Express', link: '/server/express/' },
-						{ label: 'Fastify', link: '/server/fastify/' },
-						{ label: 'Axum', link: '/server/axum' },
-					],
+					autogenerate: { directory: 'server' },
 				},
 				{
 					label: 'SSG',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'NextjS', link: '/ssg/next/' },
-						{ label: 'Astro', link: '/ssg/astro' },
-					],
+					autogenerate: { directory: 'ssg' },
 				},
 				{
 					label: 'Native',

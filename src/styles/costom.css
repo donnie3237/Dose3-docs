@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500&display=swap');
 
+*{
+	font-family: 'Noto Sans Thai';
+}
 :root {
 	--sl-color-accent: rgb(91, 0, 70);
 	--sl-color-gray-6: #090016;
