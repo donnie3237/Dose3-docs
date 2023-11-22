@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator'
 import locales from './locales.json';
+
 const site = "https://dose3-docs.vercel.app";
 
 export default defineConfig({
@@ -39,7 +40,6 @@ export default defineConfig({
 				{
 					label: 'Get started',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Installation', link: '/guides/install' },
 						{ label: 'Create', link: '/guides/create' },
 					],
