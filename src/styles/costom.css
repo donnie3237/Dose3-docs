@@ -8,8 +8,6 @@
 	--sl-color-accent: rgb(91, 0, 70);
 	--sl-color-gray-6: #090016;
 	--sl-color-black: #090016;
-
-	/* Custom */
 	--tauri-transition-speed: 200ms;
 }
 
@@ -23,10 +21,12 @@
 ::-webkit-scrollbar{
 	width: 0;
 }
-.content details {
-	padding: 0 1rem;
+input{
+	outline: none !important;
 }
-
+select{
+	outline: none !important;
+}
 /* Index hero background */
 .hero-bg {
 	position: absolute;
