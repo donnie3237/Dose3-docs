@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400&display=swap');
 
 *{
 	font-family: 'Noto Sans Thai';
@@ -8,7 +8,6 @@
 	--sl-color-accent: rgb(91, 0, 70);
 	--sl-color-gray-6: #090016;
 	--sl-color-black: #090016;
-	--tauri-transition-speed: 200ms;
 }
 
 /* Light mode colors. */
@@ -27,32 +26,8 @@ input{
 select{
 	outline: none !important;
 }
-/* Index hero background */
-.hero-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: -1;
-	overflow: hidden;
-}
 
-.bg-grad {
-	position: absolute;
-	top: 0vh;
-	right: 0vh;
-	width: 100vh;
-	height: 100vh;
-	opacity: 0.3;
-	background: radial-gradient(circle, blue 0%, var(--sl-color-black)  70%);
-	animation: 4s intro;
-}
-html[data-theme='light'] .bg-grad{
-	background: radial-gradient(circle, rgb(40, 40, 40) 0%, var(--sl-color-black)  70%);
-}
-#main-text{
+.main-text{
     color: transparent!important;
     background-image: linear-gradient(71.78deg,#c23a00 27.87%,rgba(125, 125, 125, 0.72) 52.56%,#0292ba 74.58%);
     -webkit-background-clip: text!important;
@@ -60,31 +35,19 @@ html[data-theme='light'] .bg-grad{
 	font-weight: 900 !important;
 }
 
-html[data-theme='light'] #main-text{
+html[data-theme='light'] .main-text{
     background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
 }
-
+.main-h{
+	font-size: 1.1em;
+}
 .hero > img {
 	animation: 3s intro;
 	opacity: 0.9;
-	filter: invert(1);
+	filter: invert(1) drop-shadow(0 0 3rem rgb(0, 0, 184,0.6));
+	
 }
 
 html[data-theme='light'] .hero > img {
-	filter: invert(0);
-}
-
-@keyframes intro {
-	0% {
-		scale: 2;
-		opacity: 0;
-	}
-	100% {
-	}
-}
-
-@media (prefers-reduced-motion) {
-	* {
-		transition: none !important;
-	}
+	filter: invert(0) drop-shadow(0 0 3rem rgb(131, 78, 0,0.6));
 }
