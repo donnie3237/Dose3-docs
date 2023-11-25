@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800&display=swap');
 
 *{
@@ -31,7 +30,6 @@ select{
     color: transparent!important;
     background-image: linear-gradient(71.78deg,#c23a00 27.87%,rgba(125, 125, 125, 0.72) 52.56%,#0292ba 74.58%);
     -webkit-background-clip: text!important;
-    font-family: 'Rubik';
 	font-weight: 900 !important;
 }
 
@@ -45,8 +43,7 @@ html[data-theme='light'] .main-text{
 .hero > img {
 	animation: 3s intro;
 	opacity: 0.9;
-	filter: invert(1) drop-shadow(0 0 3rem rgb(0, 0, 184,0.6));
-	
+	filter: invert(1) drop-shadow(0 0 3rem rgba(17, 102, 176, 0.6));
 }
 
 html[data-theme='light'] .hero > img {
