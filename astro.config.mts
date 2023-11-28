@@ -3,11 +3,17 @@ import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 import locales from './locales.json';
 import compress from "astro-compress";
-
-const site = "https://dose3.dtx.fyi/";
+import vercel from '@astrojs/vercel/static';
+const site = "https://dose3-docs.vercel.app/";
 
 // https://astro.build/config
 export default defineConfig({
+  output:'static',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   site,
   integrations: [starlightLinksValidator(), starlight({
     title: 'DOSE3',
