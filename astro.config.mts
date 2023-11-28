@@ -7,6 +7,7 @@ const site = "https://dose3-docs.vercel.app/";
 
 // https://astro.build/config
 export default defineConfig({
+
   site,
   integrations: [starlightLinksValidator(), starlight({
     title: 'DOSE3',
@@ -14,13 +15,13 @@ export default defineConfig({
       tag: 'meta',
       attrs: {
         property: 'og:image',
-        content: '/og.png'
+        content: site + '/og.jpg?v=1'
       }
     }, {
       tag: 'meta',
       attrs: {
         property: 'twitter:image',
-        content:'/og.png'
+        content: site + '/og.jpg?v=1'
       }
     }],
     customCss: ['./src/styles/costom.scss'],
