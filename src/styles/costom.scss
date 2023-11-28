@@ -3,6 +3,7 @@
 *{
 	font-family: 'Noto Sans Thai';
 }
+
 :root {
 	--sl-color-accent: rgb(91, 0, 70);
 	--sl-color-gray-6: #090016;
@@ -22,9 +23,6 @@
 input{
 	outline: none !important;
 }
-select{
-	outline: none !important;
-}
 
 .main-text{
     color: transparent!important;
@@ -33,10 +31,6 @@ select{
 	font-weight: 900 !important;
 }
 
-html[data-theme='light'] .main-text{
-    background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
-	font-family: 'Noto Sans Thai';
-}
 .main-h{
 	font-size: 1.1em;
 }
@@ -46,8 +40,14 @@ html[data-theme='light'] .main-text{
 	filter: invert(1) drop-shadow(0 0 3rem rgba(17, 102, 176, 0.6));
 }
 
-html[data-theme='light'] .hero > img {
-	filter: invert(0) drop-shadow(0 0 3rem rgb(131, 78, 0,0.6));
+html[data-theme='light'] {
+	.hero > img {
+		filter: invert(0) drop-shadow(0 0 3rem rgb(131, 78, 0,0.6));
+	}
+	.main-text{
+		background-image: linear-gradient(71.78deg,#1700c2 27.87%,rgb(94, 1, 94) 52.56%,red 74.58%);
+		font-family: 'Noto Sans Thai';
+	}
 }
 
 @media screen and (max-width:720px) {

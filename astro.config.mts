@@ -30,7 +30,7 @@ export default defineConfig({
         content: site + '/og.jpg?v=1'
       }
     }],
-    customCss: ['./src/styles/costom.css'],
+    customCss: ['./src/styles/costom.scss'],
     components: {
       Footer: './src/components/Footer.astro'
     },
