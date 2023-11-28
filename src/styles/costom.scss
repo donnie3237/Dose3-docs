@@ -23,7 +23,9 @@
 input{
 	outline: none !important;
 }
-
+select{
+	outline: none !important;
+}
 .main-text{
     color: transparent!important;
     background-image: linear-gradient(71.78deg,#c23a00 27.87%,rgba(125, 125, 125, 0.72) 52.56%,#0292ba 74.58%);
