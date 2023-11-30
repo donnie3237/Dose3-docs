@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 import locales from './locales.json';
 import compress from "astro-compress";
-const site = "https://dose3-docs.vercel.app/";
+const site = "https://dose3-docs.vercel.app";
 
 // https://astro.build/config
 export default defineConfig({
