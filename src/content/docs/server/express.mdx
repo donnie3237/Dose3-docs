@@ -13,7 +13,7 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 ```ts
 import {IRouter , Router} from 'express';
 const Main_router : IRouter = Router();
-import { create , get} from '../Controller/main.controller'
+import { create , get} from '../Controller/main.controller';
 
 Main_router.get("/", get)
 Main_router.post('/example',create)
@@ -85,6 +85,7 @@ export async function create(req:Request,res:Response){
 ### db
 > if you use PostgreSQL you will see  prisma floder and you can use it to set database
 ### .env
+you can change your port and setup your database in .env file
 <Tabs>
 	<TabItem label="mongoose">
     ```ts
@@ -100,6 +101,28 @@ export async function create(req:Request,res:Response){
     ```
     </TabItem>
 </Tabs>
+
+### test 
+test using supertest and vitest together learn more about <a href="https://vitest.dev/">vitest</a> and <a href="https://github.com/ladjs/supertest">supertest</a>
+```ts
+import request from 'supertest'
+import { describe, expect, test } from 'vitest'
+import app from '../src/index';
+
+describe("Test the root path",async () => {
+    const response = await request(app).get("/");
+
+    test("It should response the GET method", () => {
+        expect(response.text).toBe("welcome to expressTS");
+    });
+    test("status should be 200" , async ()=>{
+        expect(response.status).toBe(200);
+    })
+});
+```
+
+### logger
+
 
 ## 🔐Security
 &nbsp;&nbsp;security is the topic we concerned about so that we use sample protection there
