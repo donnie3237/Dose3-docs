@@ -5,7 +5,7 @@ import Default from '@astrojs/starlight/components/Footer.astro';
 const year = new Date().getFullYear();
 ---
 
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.props} data-pagefind-ignore><slot /></Default>
 
 <hr />
 
