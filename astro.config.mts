@@ -5,6 +5,7 @@ import locales from './locales.json';
 import compress from "astro-compress";
 import starlightDocSearch from '@astrojs/starlight-docsearch';
 const site = "https://dose3-docs.vercel.app";
+import sentry from "@sentry/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,15 @@ export default defineConfig({
     }),
   ],
   site,
-  integrations: [starlightLinksValidator(), starlight({
+  integrations: [
+    sentry({
+      dsn: "https://aeffa41a918f0b3841c08cf2a726ee91@o4506351450980352.ingest.sentry.io/4506368816775168",
+      sourceMapsUploadOptions: {
+        project: "javascript-astro",
+        authToken: "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",
+      },
+    }),
+    starlightLinksValidator(), starlight({
     title: 'DOSE3',
     head: [{
       tag: 'meta',
