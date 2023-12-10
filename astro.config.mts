@@ -3,19 +3,12 @@ import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 import locales from './locales.json';
 import compress from "astro-compress";
-import starlightDocSearch from '@astrojs/starlight-docsearch';
 const site = "https://dose3-docs.vercel.app";
 import sentry from "@sentry/astro";
+import spotlightjs from '@spotlightjs/astro';
 
 // https://astro.build/config
 export default defineConfig({
-  plugins: [
-    starlightDocSearch({
-      appId: 'V3137A5SP4',
-      apiKey: '2a46c2bdbd0fab70539797672105591a',
-      indexName: 'dose3',
-    }),
-  ],
   site,
   integrations: [
     sentry({

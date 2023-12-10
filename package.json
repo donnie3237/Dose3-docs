@@ -13,12 +13,11 @@
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/starlight": "^0.15.0",
-    "@astrojs/starlight-docsearch": "^0.1.0",
-    "@astrojs/vercel": "^5.2.0",
+    "@sentry/astro": "^7.86.0",
+    "@spotlightjs/astro": "^1.0.2",
     "astro": "4.0.3",
     "astro-compress": "^2.2.3",
     "sass": "^1.69.5",
-    "sharp": "^0.32.6",
     "starlight-links-validator": "^0.4.2",
     "typescript": "^5.3.3"
   }
