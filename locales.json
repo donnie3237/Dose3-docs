@@ -1,10 +1,10 @@
 {
-    "root": {
-      "label": "English",
-      "lang": "en"
-    },
-    "th": {
-      "label": "Thai",
-      "lang": "th"
-    }
-  }
+	"root": {
+		"label": "English",
+		"lang": "en"
+	},
+	"th": {
+		"label": "Thai",
+		"lang": "th"
+	}
+}
