@@ -5,20 +5,23 @@
 }
 
 :root {
-	--sl-color-accent: rgb(91, 0, 70);
+	--sl-color-accent: rgb(237, 111, 0);
 	--sl-color-gray-6: #090016;
 	--sl-color-black: #090016;
 }
 
 /* Light mode colors. */
 :root[data-theme='light'] {
-	--sl-color-accent: rgb(32, 3, 127);
+	--sl-color-accent: rgb(237, 111, 0);
 	--sl-color-gray-7: #eeeeee;
 	--sl-color-black: #eeeeee;
 }
-
 ::-webkit-scrollbar{
-	width: 0;
+	width: 0px;
+}
+.sidebar-content{
+	margin: 0;
+	overflow-y: scroll;
 }
 input{
 	outline: none !important;
@@ -64,3 +67,4 @@ html[data-theme='light'] {
 		margin-bottom: 20px;
 	}
 }
+
