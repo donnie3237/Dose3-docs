@@ -16,13 +16,15 @@
 	--sl-color-gray-3: #f9f9f9;
 	--sl-color-gray-4: #5b5b5b;
 	--sl-color-gray-5: #303030;
-  --table: rgba(255, 255, 255, 0.1);
+  --shadow: rgb(27, 27, 27);
+  --table: rgba(83, 83, 83, 0.15);
 }
 /* Light mode colors. */
 :root[data-theme="light"] {
   --sl-color-accent: rgb(237, 111, 0);
   --sl-color-gray-7: #ffffff;
   --sl-color-black: #ffffff;
+  --shadow: rgb(212, 212, 212);
   --table: rgba(0, 0, 0, 0.15);
 }
 ::-webkit-scrollbar {
@@ -106,10 +108,10 @@ html[data-theme="light"] {
 	height: 100%;
 	display: block;
 	z-index: -1;
-	opacity: 0.5;
+	opacity: 0.9;
 	overflow: hidden;
 	background: linear-gradient(-90deg, var(--table) 1px, transparent 1px),
-		linear-gradient(var(--table) 1px, transparent 1px);
+		linear-gradient(var(--table) 0px, transparent 1px);
 	background-size:
 		32px 32px,
 		32px 32px;
