@@ -83,6 +83,9 @@ html[data-theme="light"] {
 }
 
 @media screen and (max-width: 720px) {
+  ::-webkit-scrollbar{
+    width: 0;
+  }
   .hero > img {
     margin: 30px auto;
   }
