@@ -40,6 +40,11 @@ input {
 }
 select {
   outline: none !important;
+  option{
+    &:hover{
+      background-color: orange;
+    }
+  }
 }
 .main-text {
   color: transparent !important;
@@ -106,9 +111,9 @@ html[data-theme="light"] {
   height: 100%;
   display: block;
   z-index: -1;
-  opacity: 0.9;
+  opacity: 0.5;
   overflow: hidden;
-  background: linear-gradient(-90deg, var(--table) 1px, transparent 1px),
+  background: linear-gradient(-90deg, var(--table) 0px, transparent 1px),
               linear-gradient(var(--table) 0px, transparent 1px);
   background-size: 32px 32px, 32px 32px;
 }
