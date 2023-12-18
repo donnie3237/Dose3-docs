@@ -8,30 +8,28 @@
   --sl-color-accent-low: rgb(242, 242, 242);
 	--sl-color-accent: rgb(237, 111, 0);
 	--sl-color-accent-high: rgb(237, 111, 0);
-  --sl-color-gray-6: rgb(5, 5, 5);
-  --sl-color-black: #000000;
+  --sl-color-gray-6: #181818;
+  --sl-color-black: #101010;
   --sl-color-white: #ffffff;
 	--sl-color-gray-1: #f7e7ff;
 	--sl-color-gray-2: #ffffff;
 	--sl-color-gray-3: #f9f9f9;
 	--sl-color-gray-4: #5b5b5b;
 	--sl-color-gray-5: #303030;
-  --shadow: rgb(27, 27, 27);
-  --table: rgba(83, 83, 83, 0.15);
+  --table: rgba(112, 112, 112, 0.17);
 }
 /* Light mode colors. */
 :root[data-theme="light"] {
   --sl-color-accent: rgb(237, 111, 0);
   --sl-color-gray-7: #ffffff;
   --sl-color-black: #ffffff;
-  --shadow: rgb(212, 212, 212);
   --table: rgba(0, 0, 0, 0.15);
 }
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb{
-  background-color: orange;
+  background-color: rgb(237, 111, 0);
 }
 .sidebar-content {
   margin: 0;
@@ -101,50 +99,30 @@ html[data-theme="light"] {
 }
 
 .hero-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: -1;
-	opacity: 0.9;
-	overflow: hidden;
-	background: linear-gradient(-90deg, var(--table) 1px, transparent 1px),
-		linear-gradient(var(--table) 0px, transparent 1px);
-	background-size:
-		32px 32px,
-		32px 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  opacity: 0.9;
+  overflow: hidden;
+  background: linear-gradient(-90deg, var(--table) 1px, transparent 1px),
+              linear-gradient(var(--table) 0px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
 }
-
+::selection {
+  --tw-text-opacity: 1;
+  background-color: rgb(237, 111, 0);
+  color: white;
+}
 /* Transition hero background grid smoothly to page background color. */
 .hero-bg::after {
 	content: '';
 	position: absolute;
 	inset: 70% 0 0;
 	background: linear-gradient(transparent, var(--sl-color-bg));
-}
-
-.bg-grad {
-	position: absolute;
-	top: 0%;
-	right: -50%;
-	width: 150vh;
-	height: 150vh;
-	opacity: 0.5;
-	background: radial-gradient(circle, orange 0%, var(--sl-color-bg) 70%);
-	animation: 6s intro;
-}
-
-.bg-grad-red {
-	position: absolute;
-	top: 0%;
-	left: -50%;
-	width: 150vh;
-	height: 150vh;
-	opacity: 0.5;
-	background: radial-gradient(circle, orange 0%, var(--sl-color-bg) 70%);
-	animation: 14s intro;
 }
 
 @media screen and (max-width:720px) {
