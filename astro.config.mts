@@ -6,6 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 const site = "https://dxse.site";
 
+
 // https://astro.build/config
 export default defineConfig({
   site,
@@ -26,7 +27,7 @@ export default defineConfig({
     }],
     customCss: ["./src/styles/costom.scss"],
     components: {
-      Footer: "./src/components/Footer.astro",
+      Footer: "./src/components/Footer.astro"
     },
     logo: {
       dark: "./src/assets/dark.png",
