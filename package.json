@@ -14,8 +14,6 @@
   "dependencies": {
     "@astrojs/check": "^0.3.3",
     "@astrojs/starlight": "^0.15.0",
-    "@sentry/astro": "^7.88.0",
-    "@spotlightjs/astro": "^1.0.6",
     "astro": "4.0.3",
     "astro-compress": "^2.2.5",
     "sass": "^1.69.5",
@@ -23,9 +21,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^3.0.2",
-    "@biomejs/biome": "1.4.1",
-    "astro-content-devtools": "^0.0.4",
-    "solid-js": "^1.8.7"
+    "@biomejs/biome": "1.4.1"
   }
 }
