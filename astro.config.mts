@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 import locales from "./locales.json";
-import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 const site = "https://dxse.site";
@@ -81,5 +80,5 @@ export default defineConfig({
       }]
     }],
     locales
-  }), compress(), tailwind(), solidJs()]
+  }), tailwind(), solidJs()]
 });
