@@ -4,8 +4,7 @@ import starlightLinksValidator from "starlight-links-validator";
 import locales from "./locales.json";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
-const site = "https://dxse.site";
-
+const site = "https://dose3.dxse.site";
 
 // https://astro.build/config
 export default defineConfig({
