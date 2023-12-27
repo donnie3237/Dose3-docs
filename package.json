@@ -18,7 +18,7 @@
     "@astrojs/starlight": "^0.15.0",
     "@astrojs/tailwind": "^5.0.3",
     "@sentry/astro": "^7.91.0",
-    "astro": "4.0.3",
+    "astro": "4.0.7",
     "rehype-autolink-headings": "^7.1.0",
     "sass": "^1.69.5",
     "shiki": "^0.14.7",
