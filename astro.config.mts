@@ -96,7 +96,6 @@ export default defineConfig({
   tailwind(), solidJs()],
   markdown: {
 		shikiConfig: {
-			langs: ['powershell', 'ts', 'rust', 'bash', 'json', 'toml', 'html', 'js'],
 		},
 		rehypePlugins: [
 			rehypeHeadingIds,
