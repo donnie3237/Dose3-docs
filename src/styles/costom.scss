@@ -16,7 +16,7 @@
 	--sl-color-gray-3: #f9f9f9;
 	--sl-color-gray-4: #5b5b5b;
 	--sl-color-gray-5: #303030;
-  --table: rgba(112, 112, 112, 0.17);
+  --table: rgba(170, 170, 170, 0.25);
 }
 /* Light mode colors. */
 :root[data-theme="light"] {
@@ -24,13 +24,11 @@
   --sl-color-gray-7: #ffffff;
   --sl-color-black: #ffffff;
   --sl-color-white: #000000;
-  --table: rgba(0, 0, 0, 0.15);
+  --table: rgba(0, 0, 0, 0.25);
 }
 ::-webkit-scrollbar {
   width: 10px;
   height: 0;
-  border-left: 1px solid rgb(237, 111, 0);
-  border-right: 1px solid rgb(237, 111, 0);
 }
 ::-webkit-scrollbar-thumb{
   background-color: rgb(237, 111, 0);
@@ -158,4 +156,13 @@ html[data-theme="light"] {
 
 	100% {
 	}
+}
+.err{
+  h1{
+    font-size: 5em;
+  }
+  a{
+    color: var(--sl-color-black);
+    background-color: var(--sl-color-white);
+  }
 }

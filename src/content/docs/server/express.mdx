@@ -124,14 +124,12 @@ describe("Test the root path",async () => {
 ### logger
 &nbsp;&nbsp;
 
-### Api-docs
-&nbsp;&nbsp;
-
 ## 🔐Security
 &nbsp;&nbsp;security is the topic we concerned about so that we use sample protection there
 
 ### DDOS protection
 
+`this cannot protect all of DDos attack please learn more about security`
 ```ts
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, // 15 minutes
@@ -143,7 +141,7 @@ const limiter = rateLimit({
 ```
 
 ### SQL injection protection
-- prisma
+- prisma can help you from SQL injection cuz it dont want to write real SQL script from your code
 
 ### cors protection
 ```ts
