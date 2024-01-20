@@ -14,7 +14,7 @@ export default defineConfig({
   integrations: [starlightLinksValidator(), sentry({
     dsn: "https://aeffa41a918f0b3841c08cf2a726ee91@o4506351450980352.ingest.sentry.io/4506368816775168",
     sourceMapsUploadOptions: {
-      project: "javascript-astro",
+      project: "dose3",
       authToken: process.env.SENTRY_AUTH_TOKEN
     }
   }), starlight({
