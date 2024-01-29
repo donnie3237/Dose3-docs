@@ -31,8 +31,8 @@ export default defineConfig({
         property: "twitter:image",
         content: site + "/banner.png?v=1"
       }
-    }],
-    }, {
+    },
+    {
       tag: "meta",
       attrs: {
         property: "google-site-verification",
