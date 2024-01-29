@@ -32,6 +32,13 @@ export default defineConfig({
         content: site + "/banner.png?v=1"
       }
     }],
+    }, {
+      tag: "meta",
+      attrs: {
+        property: "google-site-verification",
+        content: "AoeKziV9BPz0aYPvhbWEweN_v9DjeqX2JoC-2TvsOL8"
+      }
+    }],
     customCss: ["./src/styles/costom.scss"],
     components: {
       Footer: "./src/components/Footer.astro"
