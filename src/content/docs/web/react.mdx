@@ -2,11 +2,32 @@
 title: ReactJS
 description: A react page in my new dose3 docs site.
 ---
+import { FileTree } from '@astrojs/starlight/components';
 
 &nbsp;&nbsp;&nbsp; ReactJS, or simply React, is a JavaScript library for building user interfaces. It was developed by Facebook and is maintained by Facebook and a community of individual developers and companies. React is commonly used for building single-page applications where the content is dynamically updated without needing to reload the entire page.
 
 ## Structure
 
+
+<FileTree>
+- src
+  - <a href='#components'>components</a>
+    - Header.tsx
+    - Footer.tsx
+  - <a href='#api'>Api</a>
+    - ApiURL.ts
+  - <a href='#global'>global</a>
+    - Style
+      - main.scss
+    - State/
+  - <a href='#page'>page/</a>
+  - <a href='#router'>router/</a>
+  - <a href='#functions'>functions</a>
+- test
+    - main.test.ts
+- package.json
+
+</FileTree>
 ### api
 in this case we get api file yo path your api data and return
 ```ts
@@ -30,9 +51,9 @@ export async function GetData():Promise<Stack[]>{
 ### type
 &nbsp;&nbsp; in type floder you can set your type interface and export or declare module,value with `.d.ts` file
 ```ts
-export interface Stack{ 
-    name: any, 
-    img: any 
+export interface Person{ 
+    name: string, 
+    age: number 
 }
 ```
 

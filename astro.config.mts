@@ -7,7 +7,6 @@ import solidJs from "@astrojs/solid-js";
 const site = "https://dose3.dxse.site";
 import sentry from '@sentry/astro';
 import metaTags from "astro-meta-tags";
-
 // https://astro.build/config
 export default defineConfig({
   site,
@@ -75,6 +74,11 @@ export default defineConfig({
       label: "SSG",
       autogenerate: {
         directory: "ssg"
+      }
+    }, {
+      label: "More",
+      autogenerate: {
+        directory: "more"
       }
     }, {
       label: "Native",
