@@ -15,16 +15,38 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 <Tabs>
   <TabItem label="Prisma" icon="seti:prisma">
     <FileTree>
-        - src
-            - model
-                - **Header.astro**
-        - …
-        - pages/
-
+    - prisma/
+    - src
+        - model
+            - <a href='#model'>main.model.ts</a>
+        - controller
+            - <a href='#controller'>main.controller.ts</a>
+        - router
+            - main.router.ts
+        -  <a href='#db'>db/</a>
+        - middleware
+            - main.middleware.ts
+    - test
+        - test.ts
+    - .env
     </FileTree>
   </TabItem>
   <TabItem label="Mongoose" icon="seti:db">
-    Io, Europa, Ganymede
+    <FileTree>
+    - src
+        - model
+            - <a href='#model'>main.model.ts</a>
+        - controller
+            - <a href='#controller'>main.controller.ts</a>
+        - router
+            - main.router.ts
+        -  <a href='#db'>db/</a>
+        - middleware
+            - main.middleware.ts
+    - test
+        - test.ts
+    - .env
+    </FileTree>
   </TabItem>
 </Tabs>
 ### router
@@ -160,7 +182,7 @@ const limiter = rateLimit({
 ```
 
 ### SQL injection protection
-- prisma can help you from SQL injection cuz it dont want to write real SQL script from your code
+- prisma can help you from SQL injection cuz it dont want to write real SQL script from your code learn more about <a href='https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/' target='blank'>ORM</a>
 
 ### cors protection
 ```ts
