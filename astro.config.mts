@@ -9,7 +9,7 @@ import metaTags from "astro-meta-tags";
 // https://astro.build/config
 export default defineConfig({
   site,
-  integrations: [starlightLinksValidator(), sentry({
+  integrations: [ sentry({
     dsn: "https://aeffa41a918f0b3841c08cf2a726ee91@o4506351450980352.ingest.sentry.io/4506368816775168",
     sourceMapsUploadOptions: {
       project: "dose3",
