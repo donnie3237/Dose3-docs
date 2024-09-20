@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightLinksValidator from "starlight-links-validator";
 import locales from "./locales.json";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
