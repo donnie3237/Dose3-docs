@@ -4,7 +4,7 @@ description: A react page in my new dose3 docs site.
 ---
 import { FileTree } from '@astrojs/starlight/components';
 
-&nbsp;&nbsp;&nbsp; ReactJS, or simply React, is a JavaScript library for building user interfaces. It was developed by Facebook and is maintained by Facebook and a community of individual developers and companies. React is commonly used for building single-page applications where the content is dynamically updated without needing to reload the entire page.
+ReactJS, or simply React, is a JavaScript library for building user interfaces. It was developed by Facebook and is maintained by Facebook and a community of individual developers and companies. React is commonly used for building single-page applications where the content is dynamically updated without needing to reload the entire page.
 
 ## Structure
 
@@ -46,10 +46,10 @@ export async function GetData():Promise<Stack[]>{
 > style
 >   set variable value of css font and many thing if you want it rendered on every page
 ### page
-&nbsp;&nbsp; in page floder you can  and `.jsx` file and write ReactJS code in it to make pags of your website
+in page floder you can  and `.jsx` file and write ReactJS code in it to make pags of your website
 
 ### type
-&nbsp;&nbsp; in type floder you can set your type interface and export or declare module,value with `.d.ts` file
+in type floder you can set your type interface and export or declare module,value with `.d.ts` file
 ```ts
 export interface Person{ 
     name: string, 
@@ -58,7 +58,7 @@ export interface Person{
 ```
 
 ### router
-&nbsp;&nbsp; in router floder you can import your page with `lazy-loading` put your loading page in `<Suspense fallback={...}>` and set path with your page by `react-router-dom`
+in router floder you can import your page with `lazy-loading` put your loading page in `<Suspense fallback={...}>` and set path with your page by `react-router-dom`
 ```ts
 import {BrowserRouter as  Router,Route,Routes} from 'react-router-dom'
 import Header from '../components/Header/Header'
@@ -88,17 +88,17 @@ export default MainRoute;
 ```
 
 ### components
-&nbsp;&nbsp;in components floder you can create `.jsx` file and export your components like Header,Footer ,...
+in components floder you can create `.jsx` file and export your components like Header,Footer ,...
 
 ### functions
-&nbsp;&nbsp; In functions floder you can
+In functions floder you can
 ```ts
 export function Copy(text:string):void{
     navigator.clipboard.writeText(text)
 }
 ```
 ### test
-&nbsp;&nbsp; in test floder for unit testing project to run UI testing run `npm run test`
+in test floder for unit testing project to run UI testing run `npm run test`
 ```ts
 import { describe, expect, it } from 'vitest';
 import '@testing-library/jest-dom';
@@ -117,10 +117,10 @@ describe('App', () => {
 
 ## Migration
 ### vitest
-&nbsp;&nbsp;learn more <a href="https://vitest.dev/">Vitest</a> to start your testing UI run
+learn more <a href="https://vitest.dev/">Vitest</a> to start your testing UI run
 
 ```shell title="run unit test"
 npm run test
 ```
 ### zustand
-&nbsp;&nbsp;in solidJS you can use Global state in your project like `useContext` by using Zustand to make you easy to manage your state learn more about <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">zustand</a>
+in solidJS you can use Global state in your project like `useContext` by using Zustand to make you easy to manage your state learn more about <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">zustand</a>
